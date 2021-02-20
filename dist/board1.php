@@ -208,10 +208,10 @@
                     <?php
                     require 'conn.php';
                     $query = mysqli_query($conn, "SELECT * FROM `board1`") or die(mysqli_error());
-                    while($fetch = mysqli_fetch_array($query)){
-                    ?>
+                    while ($fetch = mysqli_fetch_array($query)) {
+                        ?>
                             <tr class="w3-hover-green">
-                                <td><?php echo $fetch['b_image']?></td>
+                                <td><img src="uploads/<?= $fetch['b_image'] ?>"></td>
                                 <td><?php echo $fetch['b_name']?></td>
                                 <td><?php echo $fetch['b_lname']?></td>
                                 <td><?php echo $fetch['b_status']?></td>
@@ -221,7 +221,7 @@
                             </tr>
                             <?php
                                  include 'update_board1.php';
-                                 }
+                    }
                             ?>     
                     </table>
                 </div>
@@ -229,7 +229,7 @@
     <div class="modal fade" id="form_modal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" action="save_board1.php">
+                <form method="POST" action="save_board1.php" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h3 class="modal-title">เพิ่มข้อมูล</h3>
                     </div>
