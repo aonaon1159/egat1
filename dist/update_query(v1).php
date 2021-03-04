@@ -1,8 +1,7 @@
 <?php
     require_once 'conn.php';
     
-    if(ISSET($_POST['update'])){
-        
+    if (isset($_POST['update'])) {
         $output_dir     = "uploads/";/* Path for file upload */
         $RandomNum      = time();
         $ImageName      = str_replace(' ', '-', strtolower($_FILES['v_image']['name']));
@@ -23,7 +22,7 @@
         $v_image = $NewImageName;
         $v_prefix = $_POST['v_prefix'];
         $v_name = $_POST['v_name'];
-        $v_lname = $_POST['b_lname'];
+        $v_lname = $_POST['v_lname'];
         $v_age = $_POST['v_age'];
         $v_detail = $_POST['v_detail'];
 
@@ -31,4 +30,3 @@
         
         header("location: villager1.php");
     }
-?>
