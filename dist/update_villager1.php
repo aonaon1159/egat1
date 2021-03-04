@@ -1,7 +1,7 @@
-<div class="modal fade" id="update_modal<?php echo $fetch['b_id']?>" aria-hidden="true">
+<div class="modal fade" id="update_modal<?php echo $fetch['v_id']?>" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form method="POST" action="update_query.php" enctype="multipart/form-data">
+			<form method="POST" action="update_query(v1).php" enctype="multipart/form-data">
 				<div class="modal-header">
 					<h3 class="modal-title">แก้ไขข้อมูล</h3>
 				</div>
@@ -10,35 +10,39 @@
 					<div class="col-md-12">
 						<label><b>รูป</b></label>
 						<br>
-                            <input type="file" name="b_image" id="b_image" required="required" value="Send File"/>
+                            <input type="file" name="v_image" id="v_image"  value="Send File"/>
                             <br></br>
                         <label><b>คำนำหน้า</b></label>  
-                          <select type="gender" id="b_prefix" name="b_prefix" value="<?php echo $fetch['b_prefix']?>"class="form-control">  
-                               <option value="">-------</option>
+                          <select type="gender" id="v_prefix" name="v_prefix" value="<?php echo $fetch['v_prefix']?>"class="form-control">  
+                               <option value="">---กรุณาเลือก---</option>
                                <option value="นาย">นาย</option>  
+                               <option value="นาง">นาง</option>
                                <option value="นางสาว">นางสาว</option>  
                         </select>
                         <br>
                          <div class="form-group">    
 							<label><b>ชื่อ</b></label>
-							<input type="hidden" name="b_id" value="<?php echo $fetch['b_id']?>"/>
-							<input type="text" name="b_name" value="<?php echo $fetch['b_name']?>" class="form-control" required="required"/>
+							<input type="text" name="v_name" value="<?php echo $fetch['v_name']?>" class="form-control" required="required"/>
 						</div>
 						<div class="form-group">
 							<label><b>นามสกุล</b></label>
-							<input type="text" name="b_lname" value="<?php echo $fetch['b_lname']?>" class="form-control" required="required" />
+							<input type="text" name="v_lname" value="<?php echo $fetch['v_lname']?>" class="form-control" required="required" />
 						</div>
-						<label><b>ตำแหน่ง</b></label>  
-                          <select type="gender" id="b_status" name="b_status" class="form-control" required="required" value="<?php echo $fetch['b_status']?>" />  
-                               <option value="">-------</option>
-                               <option value="ผู้ใหญ่บ้าน">ผู้ใหญ่บ้าน</option>  
-                               <option value="ผู้ช่วยผู้ใหญ่บ้าน">ผู้ช่วยผู้ใหญ่บ้าน</option>  
-                          </select>
-                          <br>
 						<div class="form-group">
-							<label><b>เบอร์โทรศัพท์</b></label>
-							<input type="text" name="b_phone" value="<?php echo $fetch['b_phone']?>" class="form-control" required="required"/>
+							<label><b>อายุ</b></label>
+							<input type="text" name="v_age" value="<?php echo $fetch['v_age']?>" class="form-control" required="required"/>
 						</div>
+						<div class="form-group">
+                            <label><b>รายละเอียด</b></label>
+                             <textarea name="v_detail" id="v_detail"><?php echo $fetch['v_detail']?></textarea>
+                            <script>
+        ClassicEditor
+            .create( document.querySelector( '#v_detail' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script> 
+                        </div>
 					</div>
 				</div>
 				<div style="clear:both;"></div>

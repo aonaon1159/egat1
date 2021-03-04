@@ -4,7 +4,7 @@
     if (isset($_POST['save'])) {
         $output_dir 	= "uploads/";/* Path for file upload */
         $RandomNum   	= time();
-        $ImageName      = str_replace(' ', '-', strtolower($_FILES['b_image']['name']));
+        $ImageName      = str_replace(' ', '-', strtolower($_FILES['l_image']['name']));
         $ImageType      = $_FILES['b_image']['type'][0];
         $ImageExt 		= substr($ImageName, strrpos($ImageName, '.'));
         $ImageExt       = str_replace('.', '', $ImageExt);
@@ -16,16 +16,12 @@
         if (!file_exists($output_dir)) {
             @mkdir($output_dir, 0777);
         }
-        move_uploaded_file($_FILES["b_image"]["tmp_name"], $output_dir."/".$NewImageName);
+        move_uploaded_file($_FILES["l_image"]["tmp_name"], $output_dir."/".$NewImageName);
 
-        $b_image = $NewImageName;
-        $b_prefix = $_POST['b_prefix'];
-        $b_name = $_POST['b_name'];
-        $b_lname = $_POST['b_lname'];
-        $b_status = $_POST['b_status'];
-        $b_phone = $_POST['b_phone'];
+        $l_image = $NewImageName;
+        $l_detail = $_POST['l_detail'];
 
-        mysqli_query($conn, "INSERT INTO `board1` VALUES('', '$b_prefix' , '$b_image', '$b_name' , '$b_lname' , '$b_status' , '$b_phone')") or die(mysqli_error());
+        mysqli_query($conn, "INSERT INTO `landmark1` VALUES('', '$l_image' , '$l_detail')") or die(mysqli_error());
             
-        header("location: board1.php");
+        header("location: Landmark1.php");
     }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>คณะกรรมการหมู่บ้าน ม.1</title>
+        <title>ปราชญ์ชาวบ้านหมู่บ้าน ม.1</title>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-
+        <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
         <style>
             .button {
                 border: none;
@@ -38,8 +37,8 @@
             .button2 {border-radius: 12px;}
 
             .button2 {
-             background-color: #F07B41; 
-             color: white; 
+             background-color: white; 
+             color: black; 
              border: 2px solid #F07B41;
             }
 
@@ -56,14 +55,14 @@
             }
 
             .button3:hover {
-            background-color: #F07B41;
-            color: white;
+            background-color: white;
+            color: black;
             }
             .button4 {border-radius: 12px;}
 
             .button4 {
-             background-color: white; 
-             color: black; 
+             background-color: #F07B41; 
+             color: white; 
              border: 2px solid #F07B41;
             }
 
@@ -98,8 +97,8 @@
             .button7 {border-radius: 12px;}
 
             .button7 {
-             background-color: white; 
-             color: black; 
+             background-color: #F07B41; 
+             color: white; 
              border: 2px solid #F07B41;
             }
 
@@ -111,7 +110,6 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark  bg-warning">
-            
             <a class="navbar-brand" href="index.html"><img src="img/logo2.png" alt=""></a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -172,67 +170,59 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    
                     <div class="container-fluid">
-                        <h2 class="mt-4">ตำบลแม่เมาะ ม.1</h2>
+                        <h1 class="mt-4">ตำบลแม่เมาะ ม.1</h1>
                         <ol class="breadcrumb mb-4">
-                            <div class="container">
-                                <p>
-                                <a href="history1.php" class="button button1" >ข้อมูลหมู่บ้าน</a>
-                                <button href="board1.php" class="button button2" >คณะกรรมการ</button>
-                                <a href="board1.1.php" class="button button3" >โครงสร้างคณะกรรมการ</a>
-                                <a href="#" class="button button4" >สถานที่สำคัญ</a>
-                                <a href="#" class="button button5" >ปฏิทินชุมชน</a>
-                                <a href="#" class="button button6" >ปฏิทินประเพณี</a>
-                                <a href="#" class="button button7" >ปราชญ์ชาวบ้าน</a>
-                                </p> 
-                            </div>
+                            <a href="history1.php" class="button button1" >ข้อมูลหมู่บ้าน</a>
+                            <a href="board1.php" class="button button2" >คณะกรรมการ</a>
+                            <a href="board1.1.php" class="button button3" >โครงสร้างคณะกรรมการ</a>
+                            <a href="Landmark1.php" class="button button3" >สถานที่สำคัญ</a>
+                            <a href="#" class="button button5" >ปฏิทินชุมชน</a>
+                            <a href="#" class="button button6" >ปฏิทินประเพณี</a>
+                            <button href="villager1.php" class="button button7" >ปราชญ์ชาวบ้าน</button>
                         </ol>
-                    </div>
-
-                <div class="container">
-                        <div align="right">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#form_modal"><span class="glyphicon glyphicon-plus">+เพิ่มข้อมูล</span></button>
-                        </div>
-                        <br>
-                        
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr class="w3-light-grey">
-                                <th style="width:20%;"><center>รูปภาพ</center></th>
-                                <th style="width:15%;"><center>ชื่อ</center></th>
-                                <th style="width:11%;"><center>นามสกุล</center></th>
-                                <th style="width:13%;"><center>ตำแหน่ง</center></th>
-                                <th style="width:12%;"><center>เบอร์โทรศัพท์</center></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead> 
-                    <?php
-                    require 'conn.php';
-                    $query = mysqli_query($conn, "SELECT * FROM `board1`") or die(mysqli_error());
-                    while ($fetch = mysqli_fetch_array($query)) {
-                        ?>
+                        <div class="card mb-4">
+                            <p>
+                            <h3 align="center">ปราชญ์ชาวบ้านหมู่บ้านห้วยเป็ด ม.1</h3>
+                            <div class="card-body">
+                                <div align="right">
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#form_modal"><span class="glyphicon glyphicon-plus">+เพิ่มข้อมูล</span></button>
+                                </div>
+                                <br>
+                            <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="w3-light-grey">
+                                    <th style="width:18%;"><center>รูป</center></th>
+                                    <th style="width:20%;"><center>ชื่อ - นามสกุล</center></th>
+                                    <th style="width:8%;"><center>อายุ</center></th>
+                                    <th style="width:25%;"><center>รายละเอียด</center></th>
+                                    <th ></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <?php
+                                require 'conn.php';
+                                $query = mysqli_query($conn, "SELECT * FROM `villager1`") or die(mysqli_error());
+                                while ($fetch = mysqli_fetch_array($query)) {
+                                    ?>
                             <tr class="w3-hover-green">
-                                <td><img src="uploads/<?= $fetch['b_image'] ?>" width="150px"  height="200px" class="rounded mx-auto d-block"></td>
-                                <td><center><?php echo $fetch['b_prefix']?><?php echo $fetch['b_name']?></center></td>
-                                <td><center><?php echo $fetch['b_lname']?></center></td>
-                                <td><center><?php echo $fetch['b_status']?></center></td>
-                                <td><center><?php echo $fetch['b_phone']?></center></td>
-                                <td style="width:12%;"><button class="btn btn-warning" data-toggle="modal" type="button" data-target="#update_modal<?php echo $fetch['b_id']?>"><span class="glyphicon glyphicon-edit"></span>แก้ไข</button></td>
-                                <td style="width:12%;"><button class="btn btn-danger" data-toggle="modal" type="button" data-target="#delete_modal<?php echo $fetch['b_id']?>"><span class="glyphicon glyphicon-edit"></span>ลบ</button></td>
+                                <td><img src="uploads/<?= $fetch['v_image'] ?>" width="369px"  height="269px" class="rounded mx-auto d-block"></td>
+                                <td><center><?php echo $fetch['v_prefix']?><?php echo $fetch['v_name']?>   <?php echo $fetch['v_lname']?></center></td>
+                                <td><center><?php echo $fetch['v_age']?> ปี</center></td>
+                                <td><?php echo $fetch['v_detail']?><br></td>
+                                <td style="width:8%;"><button class="btn btn-warning" data-toggle="modal" type="button" data-target="#update_modal<?php echo $fetch['v_id']?>"><span class="glyphicon glyphicon-edit"></span>แก้ไข</button></td>
+                                <td style="width:8%;"><button class="btn btn-danger" data-toggle="modal" type="button" data-target="#delete_modal<?php echo $fetch['v_id']?>"><span class="glyphicon glyphicon-edit"></span>ลบ</button></td>
                             </tr>
                             <?php
-                                 include 'update_board1.php';
+                                 include 'update_villager1.php';
                     }
                             ?>     
                     </table>
-                </div>
-    <!-- show add -->            
+     <!-- show add -->            
     <div class="modal fade" id="form_modal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" action="save_board1.php" enctype="multipart/form-data">
+                <form method="POST" action="save_villager1.php" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h3 class="modal-title">เพิ่มข้อมูล</h3>
                     </div>
@@ -241,34 +231,40 @@
                         <div class="col-md-12">
                                 <label><b>รูป</b></label>
                                 <br>
-                                <input type="file" name="b_image" id="b_image" required="required" value="Send File" />
+                                <input type="file" name="v_image" id="v_image" value="Send File" />
                                 <br></br>
-                          <label><b>คำนำหน้า</b></label>  
-                          <select type="gender" id="b_prefix" name="b_prefix" class="form-control">  
-                               <option value="">-------</option>
-                               <option value="นาย">นาย</option>  
+                                <label><b>คำนำหน้า</b></label>  
+                          <select type="gender" id="v_prefix" name="v_prefix" class="form-control">  
+                               <option value="">---กรุณาเลือก---</option>
+                               <option value="นาย">นาย</option> 
+                               <option value="นาง">นาง</option> 
                                <option value="นางสาว">นางสาว</option>  
                           </select>
-                          <br>    
-                            <div class="form-group">
+                          <br>  
+                          <div class="form-group">
                                 <label><b>ชื่อ</b></label>
-                                <input type="text" id="b_name" name="b_name" class="form-control" required="required" />
-                            </div>
-                            <div class="form-group">
+                                <input type="text" id="v_name" name="v_name" class="form-control" required="required" />
+                          </div> 
+                          <div class="form-group">
                                 <label><b>นามสกุล</b></label>
-                                <input type="text" id="b_lname" name="b_lname" class="form-control" required="required"/>
-                            </div>
-                            <label><b>ตำแหน่ง</b></label>  
-                          <select type="gender" id="b_status" name="b_status" class="form-control">  
-                               <option value="">-------</option>
-                               <option value="ผู้ใหญ่บ้าน">ผู้ใหญ่บ้าน</option>  
-                               <option value="ผู้ช่วยผู้ใหญ่บ้าน">ผู้ช่วยผู้ใหญ่บ้าน</option>  
-                          </select>
-                          <br>
-                            <div class="form-group">
-                                <label><b>เบอร์โทรศัพท์</b></label>
-                                <input type="text" id="b_phone" name="b_phone" class="form-control" required="required"/>
-                            </div>
+                                <input type="text" id="v_lname" name="v_lname" class="form-control" required="required" />
+                          </div> 
+                          <div class="form-group">
+                                <label><b>อายุ</b></label>
+                                <input type="text" id="v_age" name="v_age" class="form-control" required="required" />
+                          </div>
+                          <div class="form-group">
+                                <label><b>รายละเอียด</b></label>
+                                  <textarea name="v_detail" id="editor">
+                                  </textarea>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+                          </div>
                         </div>
                     </div>
                     <div style="clear:both;"></div>
@@ -283,19 +279,20 @@
     </div> 
     <!-- end show add --> 
                 </main>
-                
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
-                        
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
                     </div>
                 </footer>
-
             </div>
         </div>
-
-
-        <script src="js/jquery-3.2.1.min.js"></script>  
-        <script src="js/bootstrap.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
@@ -303,6 +300,5 @@
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="assets/demo/chart-pie-demo.js"></script>
-        <script type="text/javascript" src="script/deleteRecords.js"></script>
     </body>
 </html>

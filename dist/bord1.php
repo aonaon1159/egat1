@@ -113,29 +113,28 @@
                       </div>
                       <div class="modal-body">
                         <div class="col-md-2"></div>
-                                                    <div class="col-md-8">
-                                                            <label>รูปภาพ</label>
-                                                            <input type="file" name="b_image"  required="required"/>
-                                                        <br><br>
-                                                        <div class="form-group">
-                                                            <label>ชื่อ</label>
-                                                            <input type="text" name="b_name" class="form-control" required="required" />
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>นามสกุล</label>
-                                                            <input type="text" name="b_lname" class="form-control" required="required"/>
-                                                        </div>
-                                                        <label>ตำแหน่ง</label>  
-                                                      <select type="gender" name="b_status"  class="form-control">  
-                                                           <option value="Male">Male</option>  
-                                                           <option value="Female">Female</option>  
-                                                      </select>  
-                                                      <br />
-                                                        <div class="form-group">
-                                                            <label>เบอร์โทรศัพท์</label>
-                                                            <input type="text" name="b_phone" class="form-control" required="required"/>
-                                                        </div>
-                                                    </div>
+                         <div class="col-md-8">
+                            <label>รูปภาพ</label>
+                            <input type="file" name="b_image"  required="required"/>
+                            <br><br>
+                        <div class="form-group">
+                            <label>ชื่อ</label>
+                            <input type="text" name="b_name" class="form-control" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label>นามสกุล</label>
+                            <input type="text" name="b_lname" class="form-control" required="required"/>
+                        </div>
+                        <label>ตำแหน่ง</label>  
+                        <select type="gender" name="b_status"  class="form-control">    <option value="Male">Male</option>  
+                            <option value="Female">Female</option>  
+                        </select>  
+                        <br />
+                        <div class="form-group">
+                            <label>เบอร์โทรศัพท์</label>
+                            <input type="text" name="b_phone" class="form-control" required="required"/>
+                        </div>
+                     </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -175,7 +174,7 @@
                    </tr> 
                     </tbody>
                     <?php                    
-                        include 'update_user.php'; }
+                        include 'update_board1.php'; }
                     ?>    
                 </table>                
                 
